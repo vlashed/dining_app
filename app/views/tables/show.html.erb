@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @table.name %>
+</p>
+
+<p>
+  <b>Capacity:</b>
+  <%= @table.capacity %>
+</p>
+
+<p>
+  <b>Height:</b>
+  <%= @table.height %>
+</p>
+
+<p>
+  <b>Length:</b>
+  <%= @table.length %>
+</p>
+
+<p>
+  <b>Area:</b>
+  <%= @table.area_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_table_path(@table) %> |
+<%= link_to 'Back', tables_path %>
