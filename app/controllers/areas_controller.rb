@@ -13,11 +13,12 @@ class AreasController < ApplicationController
   # GET /areas/1
   # GET /areas/1.json
   def show
-    @area = Area.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @area }
+   @area = Area.find(params[:id])
+      respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @table }
+     
+    
     end
   end
 
@@ -41,7 +42,7 @@ class AreasController < ApplicationController
   # POST /areas.json
   def create
     @area = Area.new(params[:area])
-
+    
     respond_to do |format|
       if @area.save
         format.html { redirect_to @area, notice: 'Area was successfully created.' }

@@ -1,7 +1,15 @@
 DiningApp::Application.routes.draw do
-  resources :tables
-
+  root to: 'areas#home'
   resources :areas
+  
+  resources :tables
+  
+  match '/areas/:id' => 'table#new', :via => [:get, :post]
+
+  
+
+   
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
