@@ -16,7 +16,7 @@ class AreasController < ApplicationController
    @area = Area.find(params[:id])
       respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @table }
+      format.json { render json: @area }
      
     
     end
@@ -26,6 +26,7 @@ class AreasController < ApplicationController
   # GET /areas/new.json
   def new
     @area = Area.new
+    
 
     respond_to do |format|
       format.html # new.html.erb
