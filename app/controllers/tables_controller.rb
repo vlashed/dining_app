@@ -16,8 +16,8 @@ class TablesController < ApplicationController
     @table = Table.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @table }
+      format.html # new.html.erb
+      format.json { render json: @areas }
     end
   end
 
@@ -25,6 +25,7 @@ class TablesController < ApplicationController
   # GET /tables/new.json
   def new
     @table = Table.new
+    
 
     respond_to do |format|
       format.html # new.html.erb

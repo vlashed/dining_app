@@ -1,10 +1,11 @@
 DiningApp::Application.routes.draw do
   root to: 'areas#home'
-  resources :areas
+  resources :areas do
+    resources :tables
+  end
   
-  resources :tables
-  
-  match '/areas/:id' => 'table#new', :via => [:get, :post]
+ 
+ 
 
   
 
